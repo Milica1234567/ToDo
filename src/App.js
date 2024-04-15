@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import ToDoListDaily from './components/ToDoListDaily';
+import ToDoWeekly from './components/ToDoWeekly';
+import Login from './components/Login';
+import Register from './components/Register';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { useState } from 'react';
+
+//<ToDoWeekly/>
 
 function App() {
+
+  const [logUser, setLogUser] = useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Login setLogUser={setLogUser}/>}></Route>
+      <Route path='/register' element={<Register/>}></Route>
+      
+      <Route path='/dashboard' element={<ToDoWeekly logUser={logUser}/>}></Route>
+
+      
+    </Routes>
+      
+    </BrowserRouter>
   );
 }
 

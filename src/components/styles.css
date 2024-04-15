@@ -1,0 +1,257 @@
+.container-todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.container-left{
+    background-color: #21295c;
+    height: 100vh;
+    width: 15%;
+    left: 0px;
+    position: relative;
+}
+
+.user-content{
+    margin-top: 80px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.user-content h3{
+    font-size: 24px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.user-icon{
+    color: white;
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+.user-calendar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-icon{
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.user-calendar p{
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+}
+
+.bottom-left{
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  bottom: 0;
+  overflow: hidden;
+
+}
+
+.bottom-left .wave{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: url('./../asscets/wave.png');
+  background-size: 800px 100px;
+}
+
+.bottom-left .wave.wave1{
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 0.7;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+@keyframes animate{
+  0%{
+    background-position-x: 0;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+}
+
+.bottom-left .wave.wave2{
+  animation: animate2 15s linear infinite;
+  z-index: 99;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+@keyframes animate2{
+  0%{
+    background-position-x: 0;
+  }
+  100%{
+    background-position-x: -1000px;
+  }
+}
+
+
+.container-right{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items:center;
+  justify-content: flex-start;
+}
+
+.days-container{
+  margin-top: 30px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.day{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21295c;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 4px;
+  margin: 0 7px;
+  margin-bottom: 20px;
+}
+
+.upper-right{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/*modal*/
+
+.add-task-btn{
+  margin: 30px 160px 0px 0px;
+  border: 2px solid #21295c;
+  background-color: transparent;
+  color: #21295c;
+  border-radius: 7px;
+  width: 150px;
+  padding: 7px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-title{
+  color: #21295c;
+}
+
+.input-task{
+  margin: 15px 20px;
+  border: 2px solid #21295c;
+  border-radius: 4px;
+  padding: 2px 15px;
+  color: #21295c;
+}
+
+.input-task::placeholder{
+  color: #21295c83;
+  font-weight: 500;
+}
+
+.add-task-modal-btn{
+  color: white;
+  background-color: #21295c;
+  border-radius: 4px;
+  border: none;
+  width: 80px;
+}
+
+.reminder{
+  color: #21295c;
+  font-size: 14px;
+}
+
+/*dropdown*/
+.dropDown{
+  position: relative;
+}
+
+.dropdown-btn{
+  color: #21295c;
+  font-size: 18px;  
+  cursor: pointer;
+}
+
+.pick-day-container{
+ position: absolute;
+ background-color: #f8f7ff7c;
+ backdrop-filter: blur(7px);
+ display: flex;
+ flex-direction: column;
+ border-radius: 7px;
+ padding: 0px 15px;
+ width: 50%;
+}
+
+.pick-day{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #21295c;
+}
+
+/*todoitem*/
+
+.todo-item{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1.5px solid #21295c;
+  border-radius: 7px;
+  padding-top: 6px;
+  padding-left: 7px;
+  padding-bottom: 0;
+}
+
+.task-text{
+  color: #21295c;
+  font-size: 14px;
+}
+
+.buttons{
+  right: 0px;
+  margin-left: auto;
+}
+
+.todo-item .buttons .button-task{
+  border: none;
+  background-color: transparent;
+  color: #21295c;
+}
+
+
